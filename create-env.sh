@@ -5,9 +5,9 @@ sleep 2;
 for i in `seq $cont_count`
 do
 	echo "=============================="
-    echo "Creating servert$i container.."
+    echo "Creating server$i container.."
     sleep 1
-    docker run --name server$i -d -it 1982vivekmate/nginx-img /bin/bash
+    sudo docker run -it --name server$i 1982vivekmate/nginx-img /bin/bash
     echo "server$i container has been created!"
 	echo "=============================="
 done
